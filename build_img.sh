@@ -118,7 +118,7 @@ fi
 sudo chroot ${MNTROOTFS} apt update
 sudo chroot ${MNTROOTFS} apt install -y dialog apt-utils
 sudo chroot ${MNTROOTFS} apt upgrade -y
-sudo chroot ${MNTROOTFS} apt install -y systemd systemd-sysv sysvinit-utils sudo udev rsyslog kmod util-linux sed netbase dnsutils ifupdown isc-dhcp-client isc-dhcp-common less vim net-tools iproute2 iputils-ping libnss-mdns iw software-properties-common ethtool dmsetup hostname iptables logrotate lsb-base lsb-release plymouth psmisc tar tcpd libsystemd-dev symlinks uuid-dev libc6-dev libncurses-dev libglib2.0-dev build-essential bridge-utils zlib1g-dev patch libpixman-1-dev libyajl-dev libfdt-dev libaio-dev python3-dev libxml2-dev libxslt-dev python-dev-is-python3 libzstd-dev
+sudo chroot ${MNTROOTFS} apt install -y systemd systemd-sysv sysvinit-utils sudo udev rsyslog kmod util-linux sed netbase dnsutils ifupdown isc-dhcp-client isc-dhcp-common less vim net-tools iproute2 iputils-ping libnss-mdns iw software-properties-common ethtool dmsetup hostname iptables logrotate lsb-base lsb-release plymouth psmisc tar tcpd libsystemd-dev symlinks uuid-dev libc6-dev libncurses-dev libglib2.0-dev build-essential bridge-utils zlib1g-dev patch libpixman-1-dev libyajl-dev libfdt-dev libaio-dev python3-dev libxml2-dev libxslt-dev python-dev-is-python3 libzstd-dev pkg-config
 
 # Change the shared library symlinks to relative instead of absolute so they play nice with cross-compiling
 sudo chroot ${MNTROOTFS} symlinks -c /usr/lib/aarch64-linux-gnu/
